@@ -1,12 +1,25 @@
 import React from "react";
+// import { register, unregister } from 'next-offline/runtime'
 
 class MyApp extends React.Component {
 
   componentDidMount(){
     if (typeof window !== "undefined") {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js');
-      }
+      window.addEventListener("load", () => {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js');
+        }
+      })
+
+      // register("/sw.js");
+      // unregister();
+
+      // if ('serviceWorker' in navigator) {
+      //   navigator.serviceWorker.ready.then(r => {
+      //     console.log(22222, r);
+      //     r.unregister();
+      //   });
+      // }
     }
   }
 

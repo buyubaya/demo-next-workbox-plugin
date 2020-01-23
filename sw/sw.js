@@ -1,4 +1,6 @@
-console.log("HELLO SW");
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
 
-workbox.skipWaiting();
-workbox.clientsClaim();
+
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
