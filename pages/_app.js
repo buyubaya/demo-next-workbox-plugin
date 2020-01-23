@@ -1,11 +1,12 @@
 import React from "react";
+import Head from "next/head";
 
 class MyApp extends React.Component {
 
   componentDidMount(){
     if (typeof window !== "undefined") {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js');
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
       }
     }
   }
@@ -16,7 +17,18 @@ class MyApp extends React.Component {
       pageProps,
     } = this.props;
 
-    return <Component {...pageProps} />
+    return (
+      <>
+        <Head>
+          <title>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</title>
+          <link rel="manifest" href="/static/manifest.json" />
+          <meta name="theme-color" content="#317EFB"/>
+          <link rel="apple-touch-icon" href="/static/icons-192.png"></link>
+        </Head>
+
+        <Component {...pageProps} />
+      </>
+    );
   }
 }
 
