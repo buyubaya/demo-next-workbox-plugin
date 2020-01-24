@@ -1,0 +1,6 @@
+[--encoding=<aesgcm | aes128gcm>] \
+[--ttl=<seconds>] \
+[--vapid-subject=<vapid subject>] \
+[--vapid-pubkey=<public key url base64>] \
+[--vapid-pvtkey=<private key url base64>] \
+[--gcm-api-key=<api key>]

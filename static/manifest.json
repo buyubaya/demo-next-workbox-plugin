@@ -4,12 +4,12 @@
   "description": "Weather forecast information",
   "icons": [
     {
-      "src": "/icons-192.png",
+      "src": "/static/icons-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icons-512.png",
+      "src": "/static/icons-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

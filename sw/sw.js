@@ -1,3 +1,17 @@
+self.addEventListener("push", (event) => {
+  const eventData = event.data;
+
+  console.log(22222, eventData.text());
+  self.registration.showNotification(
+    "HAHAHA",
+    {
+      body: "HELLO TEST",
+      icon: "https://developers.google.com/web/images/web-fundamentals-icon192x192.png"
+    }
+  );
+});
+
+
 workbox.core.skipWaiting();
 workbox.core.clientsClaim();
 
