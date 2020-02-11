@@ -65,8 +65,6 @@ const withOffline = require("./next-offline");
 
 
 const nextConfig = {
-  clientsClaim: true,
-  skipWaiting: true,
   transformManifest: manifest => ['/', '/static/manifest.json'].concat(manifest),
 
   generateSw: false,

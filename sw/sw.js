@@ -12,8 +12,8 @@ self.addEventListener("push", (event) => {
 });
 
 
-workbox.core.skipWaiting();
-workbox.core.clientsClaim();
+// workbox.core.skipWaiting();
+// workbox.core.clientsClaim();
 
 
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
