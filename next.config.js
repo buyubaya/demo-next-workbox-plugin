@@ -1,5 +1,5 @@
 const NextWorkboxPlugin = require("next-workbox-webpack-plugin");
-const withOffline = require("./next-offline");
+const withOffline = require("next-offline");
 
 
 // const nextConfig = {

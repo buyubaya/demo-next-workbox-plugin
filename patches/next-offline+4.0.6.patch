@@ -1,0 +1,31 @@
+diff --git a/node_modules/next-offline/index.js b/node_modules/next-offline/index.js
+index 1e0ae11..8f52a76 100644
+--- a/node_modules/next-offline/index.js
++++ b/node_modules/next-offline/index.js
+@@ -19,7 +19,7 @@ module.exports = (nextConfig = {}) => ({
+ 
+     const {
+       assetPrefix,
+-      generateSw = true,
++      generateSw,
+       dontAutoRegisterSw = false,
+       devSwSrc = join(__dirname, 'service-worker.js'),
+       registerSwPrefix = '',
+diff --git a/node_modules/next-offline/register-sw-compiled.js b/node_modules/next-offline/register-sw-compiled.js
+new file mode 100644
+index 0000000..7cc6ed4
+--- /dev/null
++++ b/node_modules/next-offline/register-sw-compiled.js
+@@ -0,0 +1,12 @@
++if ('serviceWorker' in navigator) {
++  window.addEventListener('load', function() {
++    navigator.serviceWorker
++      .register('/service-worker.js', {scope: '/'})
++      .then(function(registration) {
++        console.log('SW registered: ', registration);
++      })
++      .catch(function(registrationError) {
++        console.log('SW registration failed: ', registrationError);
++      });
++  });
++}

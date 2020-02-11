@@ -16,6 +16,9 @@ self.addEventListener("push", (event) => {
 // workbox.core.clientsClaim();
 
 
+console.log("HAHAHA");
+
+
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
